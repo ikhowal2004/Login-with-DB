@@ -3,11 +3,12 @@ import mongoose from 'mongoose';
 import userRoutes from './routes/routes.js'; // ✅ Correct path (not routes.js)
 import path from 'path';
 import { fileURLToPath } from 'url';
-import cors from 'cors';
-app.use(cors());
+
 
 const app = express();
 const PORT = 5000;
+import cors from 'cors';
+app.use(cors());
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, '../public')));
