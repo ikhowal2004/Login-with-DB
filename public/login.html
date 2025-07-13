@@ -542,6 +542,9 @@ document.getElementById("form-signup").addEventListener("submit", async function
   const password = document.getElementById("password-signup").value;
 
   try {
+    const baseURL = "https://login-with-db.onrender.com";
+
+fetch(`${baseURL}/api/v1/signup`, { ... });
     const response = await fetch("https://login-with-db.onrender.com/api/v1/signup", {
       method: "POST",
       headers: {
