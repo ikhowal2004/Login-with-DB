@@ -3,6 +3,8 @@ import mongoose from 'mongoose';
 import userRoutes from './routes/routes.js'; // ✅ Correct path (not routes.js)
 import path from 'path';
 import { fileURLToPath } from 'url';
+import cors from 'cors';
+app.use(cors());
 
 const app = express();
 const PORT = 5000;
